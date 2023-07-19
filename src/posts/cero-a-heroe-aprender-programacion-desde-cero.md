@@ -1,5 +1,9 @@
 ---
 title: "De cero a héroe: Cómo aprender programación desde cero"
+date: 2023-07-02
+metadata:
+  title: "De cero a héroe: Cómo aprender programación desde cero"
+  desc: "¿Alguna vez has querido aprender a programar pero no sabes por dónde empezar? No te"
 ---
 
 # {{ title }}

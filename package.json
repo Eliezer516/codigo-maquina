@@ -24,5 +24,14 @@
     "pretty-error": "^4.0.0",
     "run-s": "^0.0.0",
     "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "@orchidjs/eleventy-plugin-ids": "^0.1.1",
+    "eleventy-plugin-metagen": "^1.7.11",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.7",
+    "markdown-it-attrs": "^4.1.6",
+    "markdown-it-github-headings": "^2.0.1",
+    "slugify": "^1.6.6"
   }
 }

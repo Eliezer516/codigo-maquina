@@ -1,6 +1,6 @@
 module.exports = {
   meta: {
-    title: "Lenguaje Máquina",
+    title: "Código Máquina",
     description: "Un Blog para ayudarte en tu vida cotidiana como programador.",
     lang: "es",
     siteUrl: process.env.URL || "http://localhost:8080/",
@@ -14,7 +14,7 @@ module.exports = {
     authorEmail: "ybarretomaterano@gmail.com"
   },
   hero: { // used in hero section of main page ie. index.html.njk
-    title: "Bienvenido a Lenguaje Máquina",
+    title: "Bienvenido a Código Máquina",
     description: "Un Blog para ayudarte en tu vida cotidiana como programador"
   }
 }

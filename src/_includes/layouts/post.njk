@@ -3,8 +3,40 @@ layout: layouts/base.njk
 ---
 
 <main>
-  <article class="prose mx-auto max-w-[75ch] text-justify p-8">
+  <article class="prose prose-img:rounded-lg mx-auto max-w-[75ch] text-justify p-8">
     {{ content | safe }}
+    <div class="post__pagination flex gap-16">
+      {% set nextPost = collections.post | getNextCollectionItem(page) %}
+      {% if nextPost %}
+        <div>
+          <div class="px-6 py-4 gap-6 flex rounded shadow-lg">
+            <div class="flex items-center">
+              <span>←</span>
+            </div>
+            <a href="{{ nextPost.url | url }}" class="no-underline">
+              <span>{{ nextPost.data.title }}</span>
+            </a>
+          </div>
+        </div>
+
+      {% endif %}
+
+      {% set previousPost = collections.post | getPreviousCollectionItem(page) %}
+      {% if previousPost %}
+        <div>
+          <div class="px-6 py-4 gap-6 rounded shadow-lg flex">
+            <a href="{{ previousPost.url | url }}" class="no-underline">
+              <span>{{ previousPost.data.title }}</span>
+            </a>
+            <div class="flex items-center">
+              <span>→</span>
+            </div>
+          </div>
+        </div>
+
+      {% endif %}
+      
+    </div>
   </article>
 </main>
 
