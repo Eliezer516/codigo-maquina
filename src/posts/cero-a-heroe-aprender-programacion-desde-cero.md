@@ -1,12 +1,15 @@
 ---
 title: "De cero a héroe: Cómo aprender programación desde cero"
 date: 2023-07-02
+imgUrl: "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg"
 metadata:
   title: "De cero a héroe: Cómo aprender programación desde cero"
   desc: "¿Alguna vez has querido aprender a programar pero no sabes por dónde empezar? No te"
 ---
 
 # {{ title }}
+
+![hola]({{ imgUrl }})
 
 ¿Alguna vez has querido aprender a programar pero no sabes por dónde empezar? No te preocupes, en este artículo te enseñaremos cómo aprender programación desde cero. Te llevaremos paso a paso en este mundo emocionante y te mostraremos cómo puedes convertirte en un programador en poco tiempo.
 

@@ -1,12 +1,15 @@
 ---
 title: "Hackers éticos: ¿Cómo ayudan a proteger la seguridad informática?"
 date: 2023-07-03
+imgUrl: "https://images.pexels.com/photos/5952651/pexels-photo-5952651.jpeg"
 metadata:
   title: "Hackers éticos: ¿Cómo ayudan a proteger la seguridad informática?"
   desc: "En los últimos años, la seguridad informática se ha convertido en un tema cada vez má"
 ---
 
 # {{ title }}
+
+![hola]({{ imgUrl }})
 
 En los últimos años, la seguridad informática se ha convertido en un tema cada vez más importante para empresas y usuarios por igual. La cantidad de datos sensibles que se manejan en la actualidad hace que sea vital contar con herramientas y medidas de seguridad adecuadas para protegerlos. Sin embargo, a medida que la tecnología avanza, también lo hacen las amenazas y los ataques cibernéticos. Afortunadamente, existen los hackers éticos, expertos en seguridad informática que ayudan a proteger la ciberseguridad de empresas y usuarios mediante la identificación de vulnerabilidades y la implementación de medidas de protección.
 
