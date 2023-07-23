@@ -11,7 +11,9 @@ eleventyComputed:
 
 {{ date | readableDate}}
 
+
 ![imagen]({{ imgUrl }})
+
 
 La programación es una habilidad valiosa que puede abrirte muchas puertas en tu carrera. Si estás interesado en aprender a programar, pero no sabes por dónde empezar, este artículo es para ti. En este artículo, te mostraremos los mejores lenguajes de programación para principiantes.
 

@@ -37,7 +37,7 @@ layout: layouts/base.njk
       {% endif %}
       
     </div>
-    <a href="{{ '/' | url }}">&larr; Volver a Inicio</a>
+    <div class="mt-8 cursor-pointer"><a hx-get="/" hx-target="#container" hx-push-url="true">Volver a Inicio</a></div>
   </article>
 </main>
 

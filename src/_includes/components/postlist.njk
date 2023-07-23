@@ -1,0 +1,18 @@
+{% for post in collections.post | reverse %}
+  <div class="rounded overflow-hidden shadow-lg">
+    <div class="flex flex-col">
+      <div class="hidden md:block w-full px-6 py-4">
+        <img class="rounded-lg" src="{{ post.data.imgUrl }}" alt="Imagen de la noticia" width="300" height="200">
+      </div>
+      <div class="w-full px-6 py-4">
+        <div class="font-bold text-xl mb-2"><a class="cursor-pointer" hx-get="{{ post.url | url }}" hx-target="#container" hx-push-url="true">{{ post.data.title }}</a></div>
+        <p class="text-gray-700 text-base">{{ post.date | readableDate }}</p>
+        <div class="mt-8 flex">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Etiqueta</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Etiqueta</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Etiqueta</span>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
