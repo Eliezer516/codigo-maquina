@@ -5,16 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ '/static/css/tailwind.css' | url }}">
   {% metagen metadata %}
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container" id="container" data-aos="fade-up">
+  <div id="container">
     {{ content | safe }}
   </div>
   <script src="https://unpkg.com/htmx.org@1.9.3" integrity="sha384-lVb3Rd/Ca0AxaoZg5sACe8FJKF0tnUgR2Kd7ehUOG5GCcROv5uBIZsOqovBAcWua" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init()
+    const updatebar = () => {
+      const bodyEl = document.body
+      const barEl = document.querySelector('.bar')
+      const scrollPos = (window.scrollY / (bodyEl.scrollHeight - window.innerHeight) * 100)
+
+      barEl.style.width = `${scrollPos}%`
+      requestAnimationFrame(updatebar)
+    }
+
+    updatebar()
   </script>
 </body>
 </html>

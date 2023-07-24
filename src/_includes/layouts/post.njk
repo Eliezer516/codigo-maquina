@@ -1,15 +1,17 @@
 ---
 layout: layouts/base.njk
 ---
-
-<main>
+<main class="red">
+  <div class="progress">
+    <span class="bar"></span>
+  </div>
   <article class="prose prose-img:rounded-lg mx-auto max-w-[75ch] text-justify p-8">
     {{ content | safe }}
     <div class="post__pagination flex gap-16">
       {% set nextPost = collections.post | getNextCollectionItem(page) %}
       {% if nextPost %}
         <div>
-          <div class="px-6 py-4 gap-6 flex rounded shadow-lg">
+          <div class="px-6 py-4 gap-6 flex rounded shadow">
             <div class="flex items-center">
               <span>←</span>
             </div>
@@ -24,7 +26,7 @@ layout: layouts/base.njk
       {% set previousPost = collections.post | getPreviousCollectionItem(page) %}
       {% if previousPost %}
         <div>
-          <div class="px-6 py-4 gap-6 rounded shadow-lg flex">
+          <div class="px-6 py-4 gap-6 rounded shadow flex">
             <a href="{{ previousPost.url | url }}" class="no-underline">
               <span>{{ previousPost.data.title }}</span>
             </a>
@@ -37,7 +39,6 @@ layout: layouts/base.njk
       {% endif %}
       
     </div>
-    <div class="mt-8 cursor-pointer"><a hx-get="/" hx-target="#container" hx-push-url="true">Volver a Inicio</a></div>
+    <div class="mt-8 cursor-pointer"><a hx-get="/#" hx-target="#container" hx-push-url="true" hx-swap="outerHTML show:top">Volver a Inicio</a></div>
   </article>
 </main>
-
