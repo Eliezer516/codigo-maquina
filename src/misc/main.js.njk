@@ -1,0 +1,9 @@
+---
+permalink: "/static/js/bundle.js"
+---
+{% set js %}
+{% include "../static/js/progressBar.js" %}
+{% include "../static/js/search.js" %}
+{% include "../static/js/barbaConf.js" %}
+{% endset %}
+{{ js | safe }}

@@ -6,22 +6,16 @@
   <link rel="stylesheet" href="{{ '/static/css/tailwind.css' | url }}">
   {% metagen metadata %}
 </head>
-<body>
-  <div id="container">
+<body data-barba="wrapper">
+  {% include 'components/navbar.njk' %}
+  <div class="progress">
+    <span class="bar bg-gray-300"></span>
+  </div>
+  <div id="container" data-barba="container" class="animate-fade-up animate-once animate-duration-500 animate-normal">
     {{ content | safe }}
   </div>
-  <script src="https://unpkg.com/htmx.org@1.9.3" integrity="sha384-lVb3Rd/Ca0AxaoZg5sACe8FJKF0tnUgR2Kd7ehUOG5GCcROv5uBIZsOqovBAcWua" crossorigin="anonymous"></script>
-  <script>
-    const updatebar = () => {
-      const bodyEl = document.body
-      const barEl = document.querySelector('.bar')
-      const scrollPos = (window.scrollY / (bodyEl.scrollHeight - window.innerHeight) * 100)
-
-      barEl.style.width = `${scrollPos}%`
-      requestAnimationFrame(updatebar)
-    }
-
-    updatebar()
-  </script>
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuzzysort@2.0.4/fuzzysort.min.js"></script>
+  <script type="module" src="{{ '/static/js/bundle.js' | url }}"></script>
 </body>
 </html>

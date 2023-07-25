@@ -1,10 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
-<main class="red">
-  <div class="progress">
-    <span class="bar"></span>
-  </div>
+<main class="animate-fade-up animate-once animate-duration-500 animate-normal">
   <article class="prose prose-img:rounded-lg mx-auto max-w-[75ch] text-justify p-8">
     {{ content | safe }}
     <div class="post__pagination flex gap-16">
@@ -39,6 +36,6 @@ layout: layouts/base.njk
       {% endif %}
       
     </div>
-    <div class="mt-8 cursor-pointer"><a hx-get="/#" hx-target="#container" hx-push-url="true" hx-swap="outerHTML show:top">Volver a Inicio</a></div>
+    <div class="mt-8 cursor-pointer"><a href="/#">Volver a Inicio</a></div>
   </article>
 </main>
