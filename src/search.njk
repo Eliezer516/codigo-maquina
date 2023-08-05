@@ -6,4 +6,9 @@ eleventyComputed:
     desc: "{{ site.meta.description }}"
 ---
 
-<h1>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Dolores, illo.</h1>
+<main>
+  <div class="flex border-slate-100 border-t items-center mb-8 mt-8 md:mx-auto md:w-2/3 px-4 py-3 rounded shadow text-slate-600 w-full">
+      <input type="search" id="searchbox" class="focus:outline-none ml-3 w-full" placeholder="Search here ...">
+  </div>
+  <div id="wrapper-results" class="p-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3"></div>
+</main>

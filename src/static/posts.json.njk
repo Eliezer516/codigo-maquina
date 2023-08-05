@@ -6,7 +6,8 @@ permalink: "static/post.json"
     {
         "url": "{{ post.url | url }}",
         "title": "{{ post.data.title }}",
-        "date": "{{ post.data.page.date | readableDate }}"
+        "date": "{{ post.data.page.date | readableDate }}",
+        "imgUrl": "{{ post.data.imgUrl }}"
     }{% if not loop.last %},{% endif %}
     {% endfor %}
 ]
